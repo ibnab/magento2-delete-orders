@@ -1,6 +1,6 @@
 {
     "name": "ibnab/magento2-delete-orders",
-    "description": "xetsnion for deleting orders in magento 2.",
+    "description": "extension for deleting orders in magento 2.",
     "type": "magento2-module",
     "version": "1.0.0",
     "license": [
