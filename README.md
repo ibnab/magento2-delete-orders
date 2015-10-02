@@ -3,9 +3,13 @@
 More infos visit our magento 2 blog post: http://ibnab.com/en/blog/magento-2/magento-2-extension-our-new-extension-delete-orders
 
 ##Manual installation :
+
 download from github
+
 past in your folder app/code
+
 enable extension in  app/etc/config.php by adding 'Ibnab_DeleteOrder' => 1,
+
 and execute the command php bin/magento setup:upgrade
 
 ##Install with Composer!
