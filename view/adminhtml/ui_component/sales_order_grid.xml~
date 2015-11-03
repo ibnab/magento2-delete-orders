@@ -8,18 +8,17 @@
 <listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Ui/etc/ui_configuration.xsd">
 <container name="listing_top">
         <massaction name="listing_massaction">
+               <action name="delete_order">
                  <argument name="data" xsi:type="array">
                  <item name="config" xsi:type="array">
-                    <item name="actions" xsi:type="array">
- 
-                        <item name="hold_order" xsi:type="array">
+
                             <item name="type" xsi:type="string">delete_order</item>
                             <item name="label" xsi:type="string" translate="true">Delete</item>
-                            <item name="url" xsi:type="string">deleteorder/order/massDelete</item>
-                        </item>
-                    </item>
+                            <item name="url" xsi:type="url" path="deleteorders/order/massDelete"/>
+                    
               </item>
              </argument>
+         </action>
         </massaction>
 </container>
 </listing>
