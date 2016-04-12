@@ -1,4 +1,4 @@
-# viseo of how install without  issues
+# video of how install without  issues
 this video is very simple for how install without any issues in magento 2.04
 https://www.youtube.com/watch?v=HrzERj9e0z4
 
