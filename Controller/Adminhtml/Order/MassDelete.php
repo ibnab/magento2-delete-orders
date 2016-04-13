@@ -10,17 +10,20 @@ use Magento\Backend\App\Action\Context;
 use Magento\Sales\Model\ResourceModel\Order\CollectionFactory;
 use Magento\Ui\Component\MassAction\Filter;
 use Magento\Framework\App\ResourceConnection;
+use Magento\Framework\App\DeploymentConfig;
+use Magento\Framework\Config\ConfigOptionsListConstants;
 class MassDelete extends \Magento\Sales\Controller\Adminhtml\Order\AbstractMassAction
 {
   public $_resource;
-
+  private $deploymentConfig;
   public function __construct(Context $context,
   ResourceConnection $resource,
-  Filter $filter, CollectionFactory $collectionFactory)
+  Filter $filter, CollectionFactory $collectionFactory,DeploymentConfig $deploymentConfig)
     {
         
     $this->_resource = $resource;
     parent::__construct($context , $filter);
+    $this->deploymentConfig = $deploymentConfig;
     $this->collectionFactory = $collectionFactory;
  
   }
@@ -38,7 +41,9 @@ class MassDelete extends \Magento\Sales\Controller\Adminhtml\Order\AbstractMassA
 //start get table name
 
 		// insert table prefix, if you use any, for example magento2_ ...
-		$tblPrefix = '';
+		$tblPrefix = (string)$this->deploymentConfig->get(
+                ConfigOptionsListConstants::CONFIG_PATH_DB_PREFIX
+            );
         
         $tblSalesOrder = $connection->getTableName($tblPrefix . 'sales_order');
         $tblSalesCreditmemoComment = $connection->getTableName($tblPrefix . 'sales_creditmemo_comment');
