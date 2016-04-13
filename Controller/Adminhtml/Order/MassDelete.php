@@ -37,7 +37,8 @@ class MassDelete extends \Magento\Sales\Controller\Adminhtml\Order\AbstractMassA
         $showTables = $connection->fetchCol('show tables');
 //start get table name
 
-		$tblPrefix = 'cc_';
+		// insert table prefix, if you use any, for example magento2_ ...
+		$tblPrefix = '';
         
         $tblSalesOrder = $connection->getTableName($tblPrefix . 'sales_order');
         $tblSalesCreditmemoComment = $connection->getTableName($tblPrefix . 'sales_creditmemo_comment');
