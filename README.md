@@ -4,6 +4,9 @@ https://www.youtube.com/watch?v=HrzERj9e0z4
 
 # magento2-delete-orders extension
 
+The last version support mag2.1 and higher:
+http://store.ibnab.com/magento-2-extensions/magento2-delete-orders.html
+
 More free extensions for Magento 2 visit:
 
 http://www.ibnab.com/en/resource or http://store.ibnab.com
